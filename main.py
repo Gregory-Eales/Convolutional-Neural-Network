@@ -1,12 +1,12 @@
 # import dependencies
 import numpy as np
-#from ConvNet import ConvNet
-#import DataHandling
+from conv2 import Convolutional_Neural_Network
+from DataHandling import get_data
 
 
+x, y = get_data()
 
-x = np.ones([2, 2])
+print(x.shape)
 
-x = np.pad(x, [(1, 1), (1, 1)], mode="constant")
+CNN = Convolutional_Neural_Network(x, y)
 
-print(x)
